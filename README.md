@@ -20,6 +20,14 @@ First-year engineering student building things from the socket layer up. Current
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
+## Try the Live Demo
+
+The interactive demo page calls the live server directly, but since GitHub Pages serves over HTTPS and the API is plain HTTP, browsers block that combination when the page is hosted online.
+
+**To try it:** download the page below and open it locally — that sidesteps the restriction entirely.
+
+📥 [Download demo.html](https://raw.githubusercontent.com/20wenty1/ml-inference-server/main/docs/index.html) — right-click → "Save Link As," then open the downloaded file in your browser.
+
 ### 📫 Find me elsewhere
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/likhit-katta)
