@@ -27,4 +27,4 @@ First-year engineering student building things from the socket layer up. Current
 
 ---
 
-<sub>I'd rather write a socket than import a framework. Into systems programming and ML.</sub>
+<sub>I'd rather write a socket than import a framework.</sub>
