@@ -35,4 +35,4 @@ The interactive demo page calls the live server directly, but since GitHub Pages
 
 ---
 
-<sub>I'd rather write a socket than import a framework.</sub>
+<sub>I'd rather write a socket than import a framework</sub>
