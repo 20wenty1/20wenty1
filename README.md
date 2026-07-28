@@ -11,6 +11,14 @@ First-year engineering student building things from the socket layer up. Current
 - PyTorch worker pool with round-robin load balancing
 - Dockerized, security-hardened, and publicly deployed
 
+## Try the Live Demo
+
+The interactive demo page calls the live server directly, but since GitHub Pages serves over HTTPS and the API is plain HTTP, browsers block that combination when the page is hosted online.
+
+**To try it:** download the page below and open it locally — that sidesteps the restriction entirely.
+
+📥 [Download demo.html](https://raw.githubusercontent.com/20wenty1/ml-inference-server/main/docs/index.html) — right-click → "Save Link As," then open the downloaded file in your browser.
+
 ### 🧰 Tech I've been working with
 
 ![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
@@ -19,14 +27,6 @@ First-year engineering student building things from the socket layer up. Current
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-
-## Try the Live Demo
-
-The interactive demo page calls the live server directly, but since GitHub Pages serves over HTTPS and the API is plain HTTP, browsers block that combination when the page is hosted online.
-
-**To try it:** download the page below and open it locally — that sidesteps the restriction entirely.
-
-📥 [Download demo.html](https://raw.githubusercontent.com/20wenty1/ml-inference-server/main/docs/index.html) — right-click → "Save Link As," then open the downloaded file in your browser.
 
 ### 📫 Find me elsewhere
 
