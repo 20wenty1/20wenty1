@@ -1,23 +1,19 @@
 # Hi, I'm Likhit 👋
 
-First-year engineering student building things from the socket layer up. Currently exploring systems programming and ML engineering.
+Second-year engineering student building things from the socket layer up. Currently exploring systems programming and ML engineering.
 
 ### 🔨 What I'm building right now
 
-**[ml-inference-server](https://github.com/20wenty1/ml-inference-server)** — a spam-detection API with a hand-built C HTTP server, POSIX multithreading, and a pool of persistent PyTorch workers talking over raw Unix sockets. Deployed and running live.
+**mini-vllm** — a from-scratch LLM inference engine implementing the core ideas behind [vLLM](https://github.com/vllm-project/vllm), built on PyTorch and GPT-2. In progress.
 
-- Raw C sockets, no framework underneath
-- Multithreaded request handling
-- PyTorch worker pool with round-robin load balancing
-- Dockerized, security-hardened, and publicly deployed
+Serving an LLM well is mostly a memory and scheduling problem. A naive server handles one request at a time, or batches requests together and makes short ones wait for the longest to finish, and reserves a big contiguous block of GPU memory per request whether it's used or not. mini-vllm rebuilds the techniques that fix this, one stage at a time, and measures how much each stage actually improves throughput and latency.
 
-## Try the Live Demo
+- **Custom generation loop** — token-by-token decoding with a manually managed KV cache, no HuggingFace `generate()`
+- **Static → continuous batching** — a scheduler where requests join and leave the active batch at every generation step instead of waiting for the whole batch
+- **Paged KV cache** — fixed-size memory blocks, a block table per sequence mapping logical positions to physical blocks, and a free list for allocation and reuse
+- **Benchmarks at every stage** — tokens/sec, time-to-first-token, and time-per-token compared across naive, static, continuous, and paged versions
 
-The interactive demo page calls the live server directly, but since GitHub Pages serves over HTTPS and the API is plain HTTP, browsers block that combination when the page is hosted online.
-
-**To try it:** download the page below and open it locally — that sidesteps the restriction entirely.
-
-📥 [Download demo.html](https://raw.githubusercontent.com/20wenty1/ml-inference-server/main/docs/index.html) — right-click → "Save Link As," then open the downloaded file in your browser.
+Stack: Python, PyTorch, HuggingFace Transformers (model loading only), FastAPI
 
 ### 🧰 Tech I've been working with
 
